@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Test Page</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    #result { color: green; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1 id="heading">Welcome to Selenium Test Page</h1>
+
+  <label>Enter your name:</label>
+  <input type="text" id="nameInput" placeholder="Your name here">
+  <button id="greetBtn">Greet</button>
+
+  <p id="result">No greeting yet.</p>
+
+  <script>
+    document.getElementById("greetBtn").onclick = function() {
+      const name = document.getElementById("nameInput").value;
+      document.getElementById("result").textContent = name
+        ? `Hello, ${name}!`
+        : "Please enter a name.";
+    };
+  </script>
+</body>
+</html>
